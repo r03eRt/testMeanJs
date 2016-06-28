@@ -14,6 +14,7 @@ var path = require('path'),
  */
 exports.create = function(req, res) {
   var costumer = new Costumer(req.body);
+  console.log(costumer);
   costumer.user = req.user;
 
   costumer.save(function(err) {
@@ -80,7 +81,7 @@ exports.delete = function(req, res) {
 /**
  * List of Costumers
  */
-exports.list = function(req, res) { 
+exports.list = function(req, res) {
   Costumer.find().sort('-created').populate('user', 'displayName').exec(function(err, costumers) {
     if (err) {
       return res.status(400).send({

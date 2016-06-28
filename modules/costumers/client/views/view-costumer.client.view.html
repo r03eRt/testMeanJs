@@ -13,6 +13,21 @@
     </a>
   </div>
   <small>
+    <em class="text-muted">Address:
+      <span class="text-capitalize" data-ng-if="vm.costumer.address"
+              data-ng-bind="vm.costumer.address"></span>
+    </em>
+    <br>
+    <em class="text-muted">State:
+      <span class="text-capitalize" data-ng-if="vm.costumer.state"
+         data-ng-bind="vm.costumer.state"></span>
+    </em>
+    <br>
+    <em class="text-muted">Country:
+      <span class="text-capitalize" data-ng-if="vm.costumer.country"
+              data-ng-bind="vm.costumer.country"></span>
+    </em>
+    <br>
     <em class="text-muted">
       Posted on
       <span data-ng-bind="vm.costumer.created | date:'mediumDate'"></span>
