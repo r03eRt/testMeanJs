@@ -6,7 +6,7 @@
     var $scope,
       CostumersService;
 
-    //We can start by loading the main application module
+    // We can start by loading the main application module
     beforeEach(module(ApplicationConfiguration.applicationModuleName));
 
     // The injector ignores leading and trailing underscores here (i.e. _$httpBackend_).
@@ -100,7 +100,7 @@
           // create mock Costumer
           mockCostumer = new CostumersService();
 
-          //Initialize Controller
+          // Initialize Controller
           CostumersController = $controller('CostumersController as vm', {
             $scope: $scope,
             costumerResolve: mockCostumer
@@ -149,7 +149,7 @@
             name: 'Costumer Name'
           });
 
-          //Initialize Controller
+          // Initialize Controller
           CostumersController = $controller('CostumersController as vm', {
             $scope: $scope,
             costumerResolve: mockCostumer

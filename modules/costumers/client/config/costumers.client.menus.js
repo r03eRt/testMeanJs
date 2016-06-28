@@ -5,11 +5,11 @@
     .module('costumers')
     .run(menuConfig);
 
-  menuConfig.$inject = ['Menus'];
+  menuConfig.$inject = ['menuService'];
 
-  function menuConfig(Menus) {
+  function menuConfig(menuService) {
     // Set top bar menu items
-    Menus.addMenuItem('topbar', {
+    menuService.addMenuItem('topbar', {
       title: 'Costumers',
       state: 'costumers',
       type: 'dropdown',
@@ -17,13 +17,13 @@
     });
 
     // Add the dropdown list item
-    Menus.addSubMenuItem('topbar', 'costumers', {
+    menuService.addSubMenuItem('topbar', 'costumers', {
       title: 'List Costumers',
       state: 'costumers.list'
     });
 
     // Add the dropdown create item
-    Menus.addSubMenuItem('topbar', 'costumers', {
+    menuService.addSubMenuItem('topbar', 'costumers', {
       title: 'Create Costumer',
       state: 'costumers.create',
       roles: ['user']
