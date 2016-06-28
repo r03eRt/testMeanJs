@@ -11,7 +11,8 @@ var should = require('should'),
 /**
  * Globals
  */
-var user, costumer;
+var user;
+var  costumer;
 
 /**
  * Unit tests
@@ -27,7 +28,7 @@ describe('Costumer Model Unit Tests:', function() {
       password: 'password'
     });
 
-    user.save(function() { 
+    user.save(function() {
       costumer = new Costumer({
         name: 'Costumer Name',
         user: user
@@ -46,7 +47,7 @@ describe('Costumer Model Unit Tests:', function() {
       });
     });
 
-    it('should be able to show an error when try to save without name', function(done) { 
+    it('should be able to show an error when try to save without name', function(done) {
       costumer.name = '';
 
       return costumer.save(function(err) {
@@ -56,10 +57,10 @@ describe('Costumer Model Unit Tests:', function() {
     });
   });
 
-  afterEach(function(done) { 
+  afterEach(function(done) {
     Costumer.remove().exec(function(){
       User.remove().exec(function(){
-        done();  
+        done();
       });
     });
   });
