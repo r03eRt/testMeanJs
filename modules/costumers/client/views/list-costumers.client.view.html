@@ -26,7 +26,7 @@
   <table ng-table="vm.tableParams" class="table" show-filter="true">
     <tr data-ng-repeat="costumer in vm.costumers">
       <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-        {{costumer.name}}</td>
+        <a  data-ui-sref="costumers.view({ costumerId: costumer._id })">{{costumer.name}}</a></td>
       <td title="'State'" filter="{ state: 'text'}" sortable="'state'">
         {{costumer.state}}</td>
       <td title="'Address'" filter="{ address: 'text'}" sortable="'address'">
@@ -34,11 +34,12 @@
       <td title="'Country'" filter="{ country: 'text'}" sortable="'country'">
         {{costumer.state}}</td>
       <td>
-        <div class="pull-right" data-ng-show="vm.costumer.isCurrentUserOwner">
-          <a class="btn btn-primary" data-ui-sref="costumers.edit({ costumerId: vm.costumer._id })" href="/costumers/57728bdb5ba08bb828f4cfe5/edit">
+        <div class="pull-right">
+          <a class="btn btn-primary"
+             data-ui-sref="costumers.edit({ costumerId: costumer._id })">
             <i class="glyphicon glyphicon-edit"></i>
           </a>
-          <a class="btn btn-primary" data-ng-click="vm.remove()">
+          <a class="btn btn-primary" data-ng-click="">
             <i class="glyphicon glyphicon-trash"></i>
           </a>
         </div>

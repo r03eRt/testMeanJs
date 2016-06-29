@@ -64,7 +64,7 @@ exports.update = function(req, res) {
  * Delete an Costumer
  */
 exports.delete = function(req, res) {
-  var costumer = req.costumer;
+  var costumer = req.costumer ;
 
   costumer.remove(function(err) {
     if (err) {
@@ -80,6 +80,7 @@ exports.delete = function(req, res) {
 /**
  * List of Costumers
  */
+/*
 exports.list = function(req, res) {
   Costumer.find().sort('-created').populate('user', 'displayName').exec(function(err, costumers) {
     if (err) {
@@ -91,7 +92,7 @@ exports.list = function(req, res) {
     }
   });
 };
-
+*/
 /**
  * Costumer middleware
  */
