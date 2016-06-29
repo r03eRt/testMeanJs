@@ -1,4 +1,4 @@
-//Costumers service used to communicate Costumers REST endpoints
+// Costumers service used to communicate Costumers REST endpoints
 (function () {
   'use strict';
 
@@ -17,4 +17,4 @@
       }
     });
   }
-})();
+}());

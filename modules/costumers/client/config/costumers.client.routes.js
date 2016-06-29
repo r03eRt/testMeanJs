@@ -33,7 +33,7 @@
         },
         data: {
           roles: ['user', 'admin'],
-          pageTitle : 'Costumers Create'
+          pageTitle: 'Costumers Create'
         }
       })
       .state('costumers.edit', {
@@ -57,7 +57,7 @@
         resolve: {
           costumerResolve: getCostumer
         },
-        data:{
+        data: {
           pageTitle: 'Costumer {{ articleResolve.name }}'
         }
       });
@@ -76,4 +76,4 @@
   function newCostumer(CostumersService) {
     return new CostumersService();
   }
-})();
+}());

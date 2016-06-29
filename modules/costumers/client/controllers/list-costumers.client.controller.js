@@ -12,4 +12,4 @@
 
     vm.costumers = CostumersService.query();
   }
-})();
+}());

@@ -12,8 +12,7 @@ var should = require('should'),
  * Globals
  */
 var user;
-var  costumer;
-
+var costumer;
 /**
  * Unit tests
  */
@@ -33,7 +32,6 @@ describe('Costumer Model Unit Tests:', function() {
         name: 'Costumer Name',
         user: user
       });
-
       done();
     });
   });
@@ -58,8 +56,8 @@ describe('Costumer Model Unit Tests:', function() {
   });
 
   afterEach(function(done) {
-    Costumer.remove().exec(function(){
-      User.remove().exec(function(){
+    Costumer.remove().exec(function() {
+      User.remove().exec(function() {
         done();
       });
     });

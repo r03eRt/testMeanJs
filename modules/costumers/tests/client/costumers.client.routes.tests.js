@@ -53,7 +53,7 @@
             name: 'Costumer Name'
           });
 
-          //Initialize Controller
+          // Initialize Controller
           CostumersController = $controller('CostumersController as vm', {
             $scope: $scope,
             costumerResolve: mockCostumer
@@ -190,4 +190,4 @@
 
     });
   });
-})();
+}());

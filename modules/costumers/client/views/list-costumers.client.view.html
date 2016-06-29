@@ -22,4 +22,28 @@
   <div class="alert alert-warning text-center" data-ng-if="vm.costumers.$resolved && !vm.costumers.length">
     No Costumers yet, why don't you <a data-ui-sref="costumers.create">create one</a>?
   </div>
+
+  <table ng-table="vm.tableParams" class="table" show-filter="true">
+    <tr data-ng-repeat="costumer in vm.costumers">
+      <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+        {{costumer.name}}</td>
+      <td title="'State'" filter="{ state: 'text'}" sortable="'state'">
+        {{costumer.state}}</td>
+      <td title="'Address'" filter="{ address: 'text'}" sortable="'address'">
+        {{costumer.state}}</td>
+      <td title="'Country'" filter="{ country: 'text'}" sortable="'country'">
+        {{costumer.state}}</td>
+      <td>
+        <div class="pull-right" data-ng-show="vm.costumer.isCurrentUserOwner">
+          <a class="btn btn-primary" data-ui-sref="costumers.edit({ costumerId: vm.costumer._id })" href="/costumers/57728bdb5ba08bb828f4cfe5/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn btn-primary" data-ng-click="vm.remove()">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>
+
 </section>

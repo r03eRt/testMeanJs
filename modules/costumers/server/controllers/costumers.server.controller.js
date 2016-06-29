@@ -14,7 +14,6 @@ var path = require('path'),
  */
 exports.create = function(req, res) {
   var costumer = new Costumer(req.body);
-  console.log(costumer);
   costumer.user = req.user;
 
   costumer.save(function(err) {
@@ -46,9 +45,9 @@ exports.read = function(req, res) {
  * Update a Costumer
  */
 exports.update = function(req, res) {
-  var costumer = req.costumer ;
+  var costumer = req.costumer;
 
-  costumer = _.extend(costumer , req.body);
+  costumer = _.extend(costumer, req.body);
 
   costumer.save(function(err) {
     if (err) {
@@ -65,7 +64,7 @@ exports.update = function(req, res) {
  * Delete an Costumer
  */
 exports.delete = function(req, res) {
-  var costumer = req.costumer ;
+  var costumer = req.costumer;
 
   costumer.remove(function(err) {
     if (err) {
